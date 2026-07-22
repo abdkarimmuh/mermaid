@@ -1,19 +1,25 @@
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <div className="flex flex-1 flex-col items-center justify-center gap-4 p-6 text-center">
+      <h1 className="text-2xl font-medium">Mermaid Playground</h1>
+      <p className="text-muted-foreground max-w-md text-sm">
+        Write Mermaid diagrams and see the result rendered live in your browser.
+      </p>
+      <div className="flex items-center gap-3">
+        <Button nativeButton={false} render={<Link href="/app" />}>
+          Open Editor
+        </Button>
+        <Link
+          href="/docs"
+          className="text-muted-foreground hover:text-foreground text-sm underline underline-offset-4"
+        >
+          View Docs
+        </Link>
       </div>
     </div>
-  )
+  );
 }

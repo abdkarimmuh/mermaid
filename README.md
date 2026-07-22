@@ -4,7 +4,11 @@ A small Next.js app for writing [Mermaid](https://mermaid.js.org) diagrams and p
 
 ## Features
 
-- **`/editor`** — live editor: write Mermaid syntax on the left, see the rendered SVG update on the right as you type (debounced). Invalid syntax shows an inline error without losing the last valid diagram.
+- **`/editor`** — live editor, similar to [mermaid.live](https://mermaid.live):
+  - Syntax-highlighted code editor (CodeMirror) on the left, live SVG preview on the right, updating as you type (debounced). Invalid syntax shows an inline error without losing the last valid diagram.
+  - **Sample diagrams** menu to load a starting template for each supported diagram type.
+  - **Actions**: copy code, download SVG, download PNG, reset to the default sample.
+  - **Pan & zoom** on the preview — scroll to zoom toward the cursor, drag to pan, plus explicit zoom in/out/reset-view controls.
 - **`/docs`** — a quick syntax cheatsheet covering flowcharts, sequence diagrams, class diagrams, state diagrams, Gantt charts, and pie charts.
 - Light/dark theme, toggleable from the navbar.
 
